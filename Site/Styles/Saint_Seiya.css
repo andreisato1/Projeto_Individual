@@ -1,30 +1,11 @@
- @import url('https://fonts.cdnfonts.com/css/saiyan-sans');
+ @import url('https://fonts.cdnfonts.com/css/frostbites');
 
  * {
      margin: 0;
      box-sizing: border-box;
-     font-family: 'Saiyan Sans', sans-serif;
+     font-family: 'Frostbites', sans-serif;
  }
 
- .titulo {
-     font-size: 150px;
-     color: coral;
-     display: flex;
-     justify-content: center;
-     text-shadow:
-         -3px -3px 0 black,
-         3px -3px 0 black,
-         -3px 3px 0 black,
-         3px 3px 0 black;
- }
-
- .amarelo {
-     color: yellow;
- }
-
- .vermelho {
-     color: red;
- }
 
  .bloco_personagens {
      display: flex;
@@ -48,14 +29,15 @@
 
  .subtitulo {
      font-size: 100px;
-     color: rgb(247, 104, 9);
+     padding-bottom: 40px;
+     color: rgb(0, 157, 255);
      display: flex;
      justify-content: center;
      text-shadow:
-         -3px -3px 0 black,
-         3px -3px 0 black,
-         -3px 3px 0 black,
-         3px 3px 0 black;
+         -2px -2px 0 rgb(255, 200, 0),
+         2px -2px 0 rgb(255, 200, 0),
+         -2px 2px 0 rgb(255, 200, 0),
+         2px 2px 0 rgb(255, 200, 0);
  }
 
  .espacamento_botao{
@@ -81,12 +63,71 @@
     border-radius: 80px;
  }
 
- body{
-    background-image: url(../assets/img/Kame_House.webp);
-    background-size: 100%;
+ .bloco_historia{
+  width: 100vw;
+  height: 110vh;
+  display: flex;
+  background-image: radial-gradient(rgb(210, 255, 255), rgb(187, 254, 254), rgb(187, 254, 254), rgb(255, 246, 221),rgb(255, 248, 183));
+ }
+
+    .container_titulo .titulo{
+    font-size: 150px;
+     background-color: black;
+     display: flex;
+     justify-content: center;
+     width: 100%;
+     height: 100%;
+
+     /* text-shadow:
+         -4px -4px 0 rgb(255, 255, 0),
+         4px -4px 0 rgb(255, 255, 0),
+         -4px 4px 0 rgb(255, 255, 0),
+         4px 4px 0 rgb(255, 255, 0); */
+ }
+
+ .container_titulo{
+    width: 100vw;
+    height: 30vh;
+ }
+
+ .bloco_historia .container_historia{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 10vh;
+    
  }
 
 
+ .container_imagem {
+  
+  height: 90vh;
+  width: 40vw;
+  background: url("../Assets/Img/bronze_saints.jpg");
+  background-size: cover;
+  box-shadow: -10px 10px 0 rgb(255, 200, 0);
+}
+
+.texto{
+    font-size: 25px;
+    color: rgb(255, 200, 0);
+    text-shadow:
+         -1px -1px 0 rgb(0, 0, 0),
+         1px -1px 0 rgb(0, 0, 0),
+         -1px 1px 0 rgb(0, 0, 0),
+         1px 1px 0 rgb(0, 0, 0);
+}
+
+.historia{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
     
  
 
