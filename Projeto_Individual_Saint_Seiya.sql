@@ -196,6 +196,12 @@ select usuario.nome as usuario,
 				on idPersonagem = personagemGolpes.fkPersonagem
 				join golpes
 					on fkGolpes = idGolpes;
+                    
+select * from usuario;
+select * from armadura;
+
+
+
                 
 
 

@@ -1,0 +1,442 @@
+   @import url('https://fonts.cdnfonts.com/css/frostbites');
+
+ * {
+     margin: 0;
+     box-sizing: border-box;
+     font-family: 'Frostbites', sans-serif;
+ }
+
+ body{
+   width: 100%;
+ }
+
+ .subtitulo {
+     font-size: 70px;
+     padding-bottom: 40px;
+     color: rgb(0, 170, 255);
+     display: flex;
+     justify-content: center;
+     text-shadow:
+         -2px -2px 0 rgb(255, 200, 0),
+         2px -2px 0 rgb(255, 200, 0),
+         -2px 2px 0 rgb(255, 200, 0),
+         2px 2px 0 rgb(255, 200, 0);
+ }
+
+.container_titulo a {
+  text-decoration: none;
+  color: rgb(255, 200, 0);
+}
+
+ .container_botao{
+   display: flex;
+   justify-content: space-around;
+   width: 100%;
+ }
+
+ .botao_personagem{
+    width: 180px;
+    height: 40px;
+    background: linear-gradient(rgba(255, 255, 0, 0.381),  rgba(200, 148, 249, 0.493));
+    border-radius: 30px;
+    font-size: 30px;
+    color: rgb(37, 0, 170);
+    border: solid 2px rgb(255, 200, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow:
+         -1px -1px 0 rgb(255, 200, 0),
+         1px -1px 0 rgb(255, 200, 0),
+         -1px 1px 0 rgb(255, 200, 0),
+         1px 1px 0 rgb(255, 200, 0);
+    
+ }
+
+ .img_personagem{
+    height: 100%;
+    width: 100%;
+    border-radius: 80px;
+ }
+
+ .bloco_historia{
+  width: 99vw;
+  height: 110vh;
+  display: flex;
+  background-image: radial-gradient(rgb(210, 255, 255), rgb(187, 254, 254), rgb(187, 254, 254), rgb(255, 246, 221),rgb(255, 248, 183));
+ }
+
+    .container_titulo .titulo{
+     font-size: 30px;
+     background: url(../Assets/imgs/logo2.png) ;
+     display: flex;
+     justify-content: space-evenly;
+     padding-top: 30px;
+     width: 100%;
+     height: 100%;
+     background-size: cover;
+     background-position: center;
+     border: 10px double rgb(255, 200, 0);
+
+     /* text-shadow:
+         -4px -4px 0 rgb(255, 255, 0),
+         4px -4px 0 rgb(255, 255, 0),
+         -4px 4px 0 rgb(255, 255, 0),
+         4px 4px 0 rgb(255, 255, 0); */
+ }
+
+ .container_titulo{
+    width: 99vw;
+    height: 55vh;
+    
+ }
+
+ .bloco_historia .container_historia{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 10vh; 
+ }
+
+
+ .container_historia .container_imagem {
+  
+  height: 90vh;
+  width: 40vw;
+  background: url("../Assets/imgs/bronze_saints.jpg");
+  background-size: cover;
+  box-shadow: 10px 10px 0 rgb(255, 200, 0);
+}
+.container_video{
+   background-image: url("../Assets/imgs/constelação.jpg"); 
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   border-bottom: 10px solid rgb(255, 200, 0);
+
+}
+
+.texto{
+    font-size: 24px;
+    color: rgb(255, 200, 0);
+    text-shadow:
+         -1px -1px 0 rgb(0, 0, 0),
+         1px -1px 0 rgb(0, 0, 0),
+         -1px 1px 0 rgb(0, 0, 0),
+         1px 1px 0 rgb(0, 0, 0);
+}
+
+.container_historia .historia{
+  width: 90%;
+  height: 90%;
+  background-image: linear-gradient(rgba(25, 25, 112, 0.545), rgb(148, 237, 249));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: -10px -10px 0 rgb(255, 200, 0);
+}
+
+.bloco_personagem{
+  
+  width: 99vw;
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  background-image: radial-gradient(rgb(210, 255, 255), rgb(187, 254, 254), rgb(187, 254, 254), rgb(255, 246, 221),rgb(255, 248, 183));
+ }
+
+/* Personagem 1 */
+
+.bloco_personagem .container_personagem{
+  width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+   padding-left: 5vw;
+   padding-right: 5vw;
+}
+    
+ .container_personagem .container_imagem_personagem{
+   height: 66vh;
+  width: 40vw;
+  background: url("../Assets/imgs/seiya_bronze_8_upscaled.jpg");
+  background-size: cover;
+  box-shadow: -10px 10px 0 rgb(255, 200, 0);
+  /* background-position:center; */
+  
+ }
+
+.container_personagem .personagem{
+ width: 56%;
+height: 71%;
+background-image: linear-gradient(rgba(255, 0, 0, 0.381));
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+box-shadow: 10px -10px 0 rgb(255, 200, 0); 
+}
+
+.bloco_personagem2{
+  
+  width: 99vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background-image: radial-gradient(rgb(210, 255, 255), rgb(187, 254, 254), rgb(187, 254, 254), rgb(255, 246, 221),rgb(255, 248, 183));
+ }
+
+ /* Personagem 2 */
+
+.bloco_personagem2 .container_personagem2{
+  width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+   padding-left: 5vw;
+   padding-right: 5vw;
+}
+
+.container_personagem2 .personagem2{
+ width: 56%;
+height: 73.2%;
+background-image: linear-gradient(rgba(0, 255, 128, 0.381));
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;  
+box-shadow: -10px -10px 0 rgb(255, 200, 0);
+}
+
+.container_personagem2 .container_imagem_personagem{
+   height: 66vh;
+  width: 40vw;
+  background: url("../Assets/imgs/shiryu_bronze_3_upscaled.jpg");
+  background-size: cover;
+  box-shadow: 10px 10px 0 rgb(255, 200, 0);
+ }
+
+ /* Personagem 3 */
+
+ .bloco_personagem2 .container_personagem3{
+  width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+   padding-left: 5vw;
+   padding-right: 5vw;
+}
+
+
+.container_personagem3 .personagem2{
+ width: 56%;
+height: 73.2%;
+background-image: linear-gradient(rgba(0, 110, 255, 0.381));
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;  
+box-shadow: 10px 10px 0 rgb(255, 200, 0);
+}
+
+.container_personagem3 .container_imagem_personagem{
+   height: 66vh;
+  width: 40vw;
+  background: url("../Assets/imgs/hyoga_bronze_5.jpg");
+  background-size: cover;
+  box-shadow: -10px -10px 0 rgb(255, 200, 0);
+  
+  
+ }
+
+/* Personagem 4 */
+
+.bloco_personagem2 .container_personagem4{
+  width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+   padding-left: 5vw;
+   padding-right: 5vw;
+}
+
+ .container_personagem4 .personagem2{
+ width: 56%;
+height: 73.2%;
+background-image: linear-gradient(rgba(255, 0, 255, 0.381));
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;  
+box-shadow: -10px 10px 0 rgb(255, 200, 0);
+}
+
+.container_personagem4 .container_imagem_personagem{
+   height: 66vh;
+  width: 40vw;
+  background: url("../Assets/imgs/shun_bronze_3.jpg");
+  background-size: cover;
+  box-shadow: 10px -10px 0 rgb(255, 200, 0);
+
+ }
+
+/* Personagem 5 */
+
+ .bloco_personagem2 .container_personagem5{
+  width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+   padding-left: 5vw;
+   padding-right: 5vw;
+}
+
+ .container_personagem5 .personagem2{
+ width: 56%;
+height: 73.2%;
+background-image: linear-gradient(rgba(55, 0, 255, 0.381));
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;  
+box-shadow: 10px 10px 0 rgb(255, 200, 0);
+}
+
+.container_personagem5 .container_imagem_personagem{
+   height: 66vh;
+  width: 40vw;
+  background: url("../Assets/imgs/ikki_bronze_2.jpg");
+  background-size: cover;
+  box-shadow: -10px -10px 0 rgb(255, 200, 0);
+  
+  
+ }
+
+ /* Personagem 6 */
+
+
+ .bloco_personagem2 .container_personagem6{
+  width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+   padding-left: 5vw;
+   padding-right: 5vw;
+}
+
+ .container_personagem6 .personagem2{
+ width: 56%;
+height: 73.2%;
+background-image: linear-gradient(rgba(255, 255, 0, 0.381),  rgb(200, 148, 249));
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;  
+box-shadow: -10px 10px 0 rgb(255, 200, 0);
+}
+
+.container_personagem6 .container_imagem_personagem{
+   height: 66vh;
+  width: 40vw;
+  background: url("../Assets/imgs/athena.jpg");
+  background-size: cover;
+  box-shadow: 10px -10px 0 rgb(255, 200, 0);
+  
+ }
+
+ /* Personagem 7 */
+
+
+ .bloco_personagem2 .container_personagem7{
+  width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+   padding-left: 5vw;
+   padding-right: 5vw;
+   
+}
+
+ .container_personagem7 .personagem2{
+ width: 79%;
+height: 90%;
+background-image: linear-gradient(rgba(255, 106, 0, 0.381),  rgba(221, 255, 0, 0.381));
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;  
+box-shadow: -10px 10px 0 rgb(255, 200, 0);
+}
+
+.container_personagem7 .container_imagem_personagem{
+   height: 81vh;
+  width: 40vw;
+  background: url("../Assets/imgs/mu_gold.jpg");
+  background-size: cover;
+  box-shadow: 10px -10px 0 rgb(255, 200, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  
+ }
+
+.footer{
+   height: 50vh;
+   width: 99vw;
+   background: url(../Assets/imgs/clock_cropped.jpg);
+   background-size: cover;
+   background-position: center;
+   border-top: 10px solid rgb(255, 200, 0) ;
+   display: flex;
+   justify-content: space-evenly;
+
+   
+}
+
+.footer .container_footer{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    font-size: 30px;
+    color: rgb(255, 200, 0);
+    text-shadow:
+         -1px -1px 0 rgb(0, 0, 0),
+         1px -1px 0 rgb(0, 0, 0),
+         -1px 1px 0 rgb(0, 0, 0),
+         1px 1px 0 rgb(0, 0, 0);
+}
+
+.checks_cadastro{
+   flex-direction: column;
+}
+
+.check{
+   height: 20px;
+   display: flex;
+}
+
+

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saint Seiya | Dashboards</title>
+
+
+    <link rel="stylesheet" href="./../css/dashboards.css">
+    <link rel="stylesheet" href="./../css/estilo.css" />
+    <link rel="stylesheet" href="./../css/Saint_Seiya.css">
+    <link rel="icon" href="./assets/icon/saint_seiya_icon-removebg-preview.png" />
+    <script src="../js/sessao.js"></script>
+    <script src="./../js/alerta.js"></script>
+
+
+    <!-- scripts do Chart.js - 2022-1 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<!-- <body onload=" atualizarFeed()"> -->
+
+<body>
+
+    <div class="janela">
+        <div class="header-left">
+            <h1>Saint Seiya</h1>
+
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+            </div>
+
+            <div class="hello">
+
+                <span class="textoDashboard">Personagem</span>
+                <span class="textoDashboard">Favorito</span><br><br>
+                
+
+                <h3><span id="personagem_usuario">Personagem</span></h3>
+            </div>
+
+            <div class="hello">
+
+                <span class="textoDashboard">Armadura</span><br><br>
+
+                <h3><span id="armadura_usuario">Armor</span></h3>
+            </div>
+
+
+
+
+
+            <div class="btn-logout" onclick="limparSessao()">
+                <h3>Sair</h3>
+            </div>
+
+        </div>
+
+        <div class="imgdashboard"><img id="imgcav" class="img_cav" src="" alt=""></div>
+
+        <div class="box_graph" id="graficos">
+
+
+            <div class="graph">
+                <canvas id="graficoPersonagemFavorito"></canvas>
+            </div>
+
+
+
+            <div class="graph">
+                <canvas id="graficoRadarPersonagem"></canvas>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
+
+<script>
+    listaImagemPersonagem = [
+        "../assets/imgs/seiya_dashboard2.jpg",
+        "../assets/imgs/shiryu_dashboard.jpg",
+        "../assets/imgs/hyoga_dashboard.jpg",
+        "../assets/imgs/shun_dashboard.jpg",
+        "../assets/imgs/ikki_dashboard.jpg",
+        "../assets/imgs/mu_dashboard.jpg",
+        "../assets/imgs/aldebaran_dashboard.jpg",
+        "../assets/imgs/saga_dashboard.jpg",
+        "../assets/imgs/mdm_dashboard.jpg",
+        "../assets/imgs/aiolia_dashboard.jpg",
+        "../assets/imgs/shaka_dashboard.jpg",
+        "../assets/imgs/dohko_dashboard.jpg",
+        "../assets/imgs/milo_dashboard.jpg",
+        "../assets/imgs/aiolos_dashboard.jpg",
+        "../assets/imgs/shura_dashboard.jpg",
+        "../assets/imgs/camus_dashboard.jpg",
+        "../assets/imgs/afrodite_dashboard.jpg",
+    ];
+
+    listaPersonagem = ['Seiya','Shiryu','Hyoga','Shun','Ikki','Mu','Aldebaran','Saga','Máscara da Morte','Aiolia','Shaka','Dohko','Milo','Aiolos','Shura','Camus','Afrodite'];
+
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    fetch(`/personagem/${sessionStorage.ID_USUARIO}`)
+        .then(res => res.json())
+        .then(dados => {
+            personagem_usuario.innerHTML = dados[0].nome;
+            mostrar();
+        });
+
+    fetch(`/personagem/armadura/${sessionStorage.ID_USUARIO}`)
+        .then(res => res.json())
+        .then(dados => {
+            console.log(dados);
+
+            armadura_usuario.innerHTML = dados[0].armadura;
+        });
+
+
+    gerarGraficoPersonagemFavorito();
+
+    function gerarGraficoPersonagemFavorito() {
+
+        fetch("/personagem/favoritos")
+            .then(function (resposta) {
+                return resposta.json();
+            })
+            .then(function (dados) {
+
+                var labels = [];
+                var quantidade = [];
+
+                for (var i = 0; i < dados.length; i++) {
+                    labels.push(dados[i].personagem);
+                    quantidade.push(dados[i].escolhas);
+                }
+
+                var ctx = document.getElementById("graficoPersonagemFavorito").getContext("2d");
+
+                new Chart(ctx, {
+                    type: "bar",
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: "Quantidade de vezes escolhido",
+                            data: quantidade,
+                            backgroundColor: 'rgba(255, 223, 0, 0.6)', 
+                            borderColor: 'rgba(255, 223, 0, 1)',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    font: {
+                                        size: 20,
+                                        weight: 'bold'
+                                    },
+                                    color: '#ffff00' 
+                                }
+                            },
+                            tooltip: {
+                                titleFont: {
+                                    size: 18
+                                },
+                                bodyFont: {
+                                    size: 16
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    precision: 0,
+                                    font: {
+                                        size: 18,
+                                        weight: 'bold'
+                                    },
+                                    color: '#ffff00' 
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    font: {
+                                        size: 18,
+                                        weight: 'bold'
+                                    },
+                                    color: '#ffff00' 
+                                }
+                            }
+                        }
+                    }
+                });
+
+
+            })
+            .catch(function (erro) {
+                console.log("Erro ao gerar gráfico:", erro);
+            });
+    }
+
+
+    gerarRadarPersonagem();
+
+    function gerarRadarPersonagem() {
+        fetch(`/personagem/${sessionStorage.ID_USUARIO}`)
+            .then(res => res.json())
+            .then(dados => {
+                const personagem = dados[0];
+                const labels = ["Força", "Velocidade", "Stamina", "Cosmo", "Durabilidade"];
+                const status = [
+                    personagem.forca,
+                    personagem.velocidade,
+                    personagem.stamina,
+                    personagem.cosmo,
+                    personagem.durabilidade
+                ];
+
+                const ctx = document.getElementById("graficoRadarPersonagem").getContext("2d");
+
+                new Chart(ctx, {
+                    type: "radar",
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Atributos do personagem favorito',
+                            data: status,
+                            backgroundColor: 'rgba(255, 223, 0, 0.6)',  
+                            borderColor: 'rgba(255, 223, 0, 1)',        
+                            borderWidth: 2,
+                            pointBackgroundColor: 'rgba(255, 200, 0, 1)',
+                            pointBorderColor: '#000',
+                            pointRadius: 3
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            r: {
+                                beginAtZero: true,
+                                min: 0,
+                                max: 10, 
+                                ticks: {
+                                    color: "yellow",
+                                    backdropColor: "transparent",  
+                                    stepSize: 1,
+                                    font: { size: 17 }
+                                },
+                                pointLabels: {
+                                    color: "yellow",   
+                                    font: { size: 12, weight: "bold" }
+                                },
+                                grid: {
+                                    color: "rgba(255, 255, 255, 0.3)"
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                
+                                labels: {
+                                    color: "#fff",
+                                    font: { size: 15, weight: "bold" }
+                                }
+                                
+                            }
+                        }
+                    }
+                });
+            })
+            .catch(err => console.error("Erro ao gerar radar:", err));
+    }
+
+
+    function mostrar() {
+
+        for (var i = 0; i < listaImagemPersonagem.length; i++) {
+            if(personagem_usuario.innerHTML == listaPersonagem[i]){
+                imgcav.src = listaImagemPersonagem[i]
+            }
+            
+        }
+
+    //     if (personagem_usuario.innerHTML == 'Seiya') {
+    //         imgcav.src = listaImagemPersonagem[0]
+    //     } else if (personagem_usuario.innerHTML == 'Shiryu') {
+    //         imgcav.src = listaImagemPersonagem[1]
+    //     } else if (personagem_usuario.innerHTML == 'Hyoga') {
+    //         imgcav.src = listaImagemPersonagem[2]
+    //     } else if (personagem_usuario.innerHTML == 'Shun') {
+    //         imgcav.src = listaImagemPersonagem[3]
+    //     } else if (personagem_usuario.innerHTML == 'Ikki') {
+    //         imgcav.src = listaImagemPersonagem[4]
+    //     } else if (personagem_usuario.innerHTML == 'Mu') {
+    //         imgcav.src = listaImagemPersonagem[5]
+    //     } else if (personagem_usuario.innerHTML == 'Aldebaran') {
+    //         imgcav.src = listaImagemPersonagem[6]
+    //     } else if (personagem_usuario.innerHTML == 'Saga') {
+    //         imgcav.src = listaImagemPersonagem[7]
+    //     } else if (personagem_usuario.innerHTML == 'mdm') {
+    //         imgcav.src = listaImagemPersonagem[8]
+    //     } else if (personagem_usuario.innerHTML == 'Aiolia') {
+    //         imgcav.src = listaImagemPersonagem[9]
+    //     } else if (personagem_usuario.innerHTML == 'Shaka') {
+    //         imgcav.src = listaImagemPersonagem[10]
+    //     } else if (personagem_usuario.innerHTML == 'Dohko') {
+    //         imgcav.src = listaImagemPersonagem[11]
+    //     } else if (personagem_usuario.innerHTML == 'Milo') {
+    //         imgcav.src = listaImagemPersonagem[12]
+    //     } else if (personagem_usuario.innerHTML == 'Aiolos') {
+    //         imgcav.src = listaImagemPersonagem[13]
+    //     } else if (personagem_usuario.innerHTML == 'Shura') {
+    //         imgcav.src = listaImagemPersonagem[14]
+    //     } else if (personagem_usuario.innerHTML == 'Camus') {
+    //         imgcav.src = listaImagemPersonagem[15]
+    //     } else if (personagem_usuario.innerHTML == 'Afrodite') {
+    //         imgcav.src = listaImagemPersonagem[16]
+    //     }
+    }
+
+</script>
