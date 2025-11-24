@@ -2,14 +2,14 @@
 function validarSessao() {
     var email = sessionStorage.EMAIL_USUARIO;
     var nome = sessionStorage.NOME_USUARIO;
-    var personagem = sessionStorage.PERSONAGEM_FAVORITO; // Adicionei a var personagem
+    
 
     var b_usuario = document.getElementById("b_usuario");
-    var personagem_usuario = document.getElementById("personagem_usuario");
+    
 
     if (email != null && nome != null) {
         b_usuario.innerHTML = nome;
-        personagem_usuario.innerHTML = personagem;
+        
     } else {
         window.location = "../login.html";
     }

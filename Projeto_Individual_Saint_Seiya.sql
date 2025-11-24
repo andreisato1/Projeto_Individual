@@ -202,6 +202,8 @@ select * from armadura;
 
 
 
+
+
                 
 
 

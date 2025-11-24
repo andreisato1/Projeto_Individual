@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="./css/estilo.css" />
   <link rel="icon" href="./assets/icon/saint_seiya_icon-removebg-preview.png" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  
   <link rel="stylesheet" href="./css/Saint_Seiya.css">
 </head>
 
@@ -250,8 +250,6 @@
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    // var codigoVar = codigo_input.value;
-    // var idEmpresaVincular
     var personagemFavoritoVar = select_personagemFavorito.value; // variavel adicional saint seiya
 
     // Verificando se há algum campo em branco
@@ -260,7 +258,6 @@
       emailVar == "" ||
       senhaVar == "" ||
       confirmacaoSenhaVar == ""
-      // || codigoVar == ""
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
@@ -296,18 +293,7 @@
 
     }
 
-    // Verificando se o código de ativação é de alguma empresa cadastrada
-    // for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
-    //   if (listaEmpresasCadastradas[i].codigo_ativacao == codigoVar) {
-    //     idEmpresaVincular = listaEmpresasCadastradas[i].id
-    //     console.log("Código de ativação válido.");
-    //     break;
-    //   } else {
-    //     cardErro.style.display = "block";
-    //     mensagem_erro.innerHTML = "(Mensagem de erro para código inválido)";
-    //     finalizarAguardar();
-    //   }
-    // }
+ 
 
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
@@ -321,7 +307,6 @@
         nomeServer: nomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,
-        // idEmpresaVincularServer: idEmpresaVincular,
         personagemFavoritoServer: personagemFavoritoVar
       }),
     })

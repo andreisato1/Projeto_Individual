@@ -404,7 +404,7 @@ box-shadow: -10px 10px 0 rgb(255, 200, 0);
 .footer{
    height: 50vh;
    width: 99vw;
-   background: url(../Assets/imgs/clock_cropped.jpg);
+   background-image: url(../Assets/imgs/clock_cropped.jpg);
    background-size: cover;
    background-position: center;
    border-top: 10px solid rgb(255, 200, 0) ;
