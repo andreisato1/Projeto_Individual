@@ -4,13 +4,13 @@ body {
   padding: 0;
 }
 
-:root {
+/* :root {
   --tamanho-header: 80px;
   --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
   --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
   --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
   --tamanho-footer: 65px;
-}
+} */
 
 .container {
   display: flex;
@@ -18,10 +18,10 @@ body {
   margin: auto;
 }
 
-.header {
+/* .header {
   height: var(--tamanho-header);
   border-bottom: 2px solid #32b9cd;
-}
+} */
 
 .header .container {
   justify-content: space-between;
@@ -29,29 +29,29 @@ body {
   height: 100%;
 }
 
-.container_titulo a {
+/* .container_titulo a {
   text-decoration: none;
   color: rgb(255, 200, 0);
-}
+} */
 
-.agora {
+/* .agora {
   font-weight: 800;
-}
+} */
 
-.navbar {
+/* .navbar {
   width: 300px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   list-style: none;
   color: #e3b062;
-}
+} */
 
-.titulo {
+/* .titulo {
   color: #32b9cd;
   width: fit-content;
   font-weight: 500;
-}
+} */
 
 .header h1 {
   margin: 0;
@@ -59,80 +59,80 @@ body {
 
 /* BANNER */
 
-.banner {
+/* .banner {
   height: var(--tamanho-banner);
   color: white;
   background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
   background-size: cover;
-}
+} */
 
-.banner .container {
+/* .banner .container {
   justify-content: center;
   align-items: center;
   height: 100%;
-}
+} */
 
-.banner .container p {
+/* .banner .container p {
   width: 50%;
   margin: 0;
   padding: 0;
   font-size: 36px;
-}
+} */
 
-.banner .container span {
+/* .banner .container span {
   font-weight: 800;
-}
+} */
 
 /* MISSÃO VISÃO VALORES */
 
-.social {
+/* .social {
   background-color: #e5e5e5;
   display: flex;
-}
+} */
 
-.social .container {
+/* .social .container {
   justify-content: center;
-}
+} */
 
-.box img {
+/* .box img {
   width: 170px;
-}
+} */
 
-.social .container .boxes {
+/* .social .container .boxes {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 30px 0;
-}
+} */
 
-.social p {
+/* .social p {
   text-align: center;
-}
+} */
 
-.box {
+/* .box {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 /* FOOTER */
 
-.footer {
+/* .footer {
   background-color: #32b9cd;
   height: 150px;
   color: #fff;
   display: flex;
   font-size: 15px;
-}
+} */
 
-.footer .container {
+/* .footer .container {
   justify-content: center;
   text-align: center;
-}
+} */
 
-.footer .container .version {
+/* .footer .container .version {
   font-size: 12px;
-}
+} */
 
 /* LOGIN */
 
@@ -364,10 +364,10 @@ input {
   animation-iteration-count: infinite;
 }
 
-@keyframes bell {
+/* @keyframes bell {
   0%   {transform: rotate(25deg)}
   25%  {transform: rotate(-25deg)}
   50%  {transform: rotate(25deg)}
   75%  {transform: rotate(-25deg)}
   100% {transform: rotate(25deg)}
-}
+} */

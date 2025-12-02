@@ -277,9 +277,9 @@
         mensagem_erro.innerHTML = `O email deve conter @ e .`
         finalizarAguardar();
         return false;
-      } else if (senhaVar.length <= 6) {
+      } else if (senhaVar.length < 8) {
         cardErro.style.display = "block";
-        mensagem_erro.innerHTML = `A senha deve ter mais de 6 caracteres`
+        mensagem_erro.innerHTML = `A senha deve ter no mínimo 8 caracteres`
         finalizarAguardar();
         return false;
       } else if (confirmacaoSenhaVar != senhaVar) {

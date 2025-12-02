@@ -16,21 +16,21 @@ body {
 
 /* pagina graficos */
 
-.dash-header {
+/* .dash-header {
   background-color: #212124;
-}
+} */
 
-.dash {
+/* .dash {
   width: 80%;
   position: relative;
   top: 0;
   left: 20%;
   height: 100vh;
   overflow: auto;
-}
+} */
 
 
-.cards {
+/* .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -38,49 +38,49 @@ body {
   width: 100%;
   align-items: center;
   color: white;
-}
+} */
 
 
-.cards h1 {
+/* .cards h1 {
   font-size: 22px;
   border-bottom: solid white 1px;
   text-align: left;
   font-weight: lighter;
   margin: 20px;
-}
+} */
 
-.temperatura,
+/* .temperatura,
 .umidade {
   margin: 5px;
   margin-left: 20px;
   width: 75%;
-}
+} */
 
-.cor-alerta {
+/* .cor-alerta {
   width: 13%;
   height: 30%;
   border-radius: 50%;
   display: inline-block;
-}
+} */
 
-.btns-dash {
+/* .btns-dash {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 30px;
   flex-wrap: wrap;
   padding: 0 30% 0 30%;
-}
+} */
 
 
 
-.tituloGraficos {
+/* .tituloGraficos {
   color: rgb(216, 216, 216);
   display: flex;
   justify-content: center;
-}
+} */
 
-.btn-chart {
+/* .btn-chart {
   font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border: 0;
   font-weight: 600;
@@ -91,34 +91,34 @@ body {
   margin: 5px;
   border-radius: 3px;
   cursor: pointer
-}
+} */
 
-.btn-pink {
+/* .btn-pink {
   color: white;
   background-color: #e6005a;
-}
+} */
 
-.btn-white {
+/* .btn-white {
   color: #e6005a;
   background-color: white;
 
-}
+} */
 
-.label-captura {
+/* .label-captura {
   height: 80px;
-}
+} */
 
-.display-none {
+/* .display-none {
   display: none;
-}
+} */
 
-.display-flex {
+/* .display-flex {
   display: flex;
-}
+} */
 
-.display-block {
+/* .display-block {
   display: block;
-}
+} */
 
 
 
