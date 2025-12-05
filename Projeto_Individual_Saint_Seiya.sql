@@ -198,7 +198,14 @@ select usuario.nome as usuario,
 					on fkGolpes = idGolpes;
                     
 select * from usuario;
+
 select * from armadura;
+
+select * from personagem;
+
+select * from golpes;
+
+select * from personagemGolpes;
 
 
 
